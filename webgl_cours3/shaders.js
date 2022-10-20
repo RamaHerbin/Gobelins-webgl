@@ -31,30 +31,30 @@ const frag = /*glsl*/ `
 
   void main() {
     
-    // float ratio = 256./512.;
-    // float test = distance(uTime, 1.);
+    float ratio = 256./512.;
+    float test = distance(uTime, 1.);
 
-    // vec2 coord = vTexCoord;
+    vec2 coord = vTexCoord;
     
-    // coord -= vec2(.5);
-    // coord *= rotate2d(uTime);
-    // coord += vec2(.5);
+    coord -= vec2(.5);
+    coord *= rotate2d(uTime);
+    coord += vec2(.5);
 
-    // coord.x += cos(uTime * 5. + coord.y);
-    // gl_FragColor = vec4(color, 1.);
-
-
-    vec3 texColor = texture2D(tTex, vTexCoord).rgb;
-
-    vec2 center = vec2(.5);
-
-    float mask = distance(vTexCoord, center);
-
-    mask = 1. - step(.3, mask);
-
-    vec3 color = texColor * mask;
-
+    coord.x += cos(uTime * 5. + coord.y);
     gl_FragColor = vec4(color, 1.);
+
+
+    // vec3 texColor = texture2D(tTex, vTexCoord).rgb;
+
+    // vec2 center = vec2(.5);
+
+    // float mask = distance(vTexCoord, center);
+
+    // mask = 1. - step(.3, mask);
+
+    // vec3 color = texColor * mask;
+
+    // gl_FragColor = vec4(color, 1.);
 
   }`;
 
