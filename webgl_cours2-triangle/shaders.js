@@ -26,7 +26,7 @@
 //     }
 // `
 /** @type {WebGLRenderingContext} */
-export const vert = /*GLSL*/`
+export const vert = /* glsl */`
 
 attribute vec2 aPosition;
 attribute vec3 aColor;
@@ -51,11 +51,10 @@ void main() {
   vColor = aColor;
 }`;
 
-export const frag = /* GLSL */`
+export const frag = /* glsl */`
     precision highp float;
 
     varying vec3 vColor;
-
 
     void main() {
         vec3 color = vColor;
