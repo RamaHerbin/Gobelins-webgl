@@ -44,7 +44,6 @@ const setupCanvas = () => {
   $canvas.height = size * dpr;
 
   gl = $canvas.getContext('webgl')
-
 }
 
 // gl = ccontext
